@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.example.pictureshare.MainActivity;
 import com.example.pictureshare.MySQLiteQpenHelper;
 import com.example.pictureshare.R;
-import com.example.pictureshare.login.txMysql;
+import com.example.pictureshare.txMysql;
 import com.example.pictureshare.pContract;
 
 import java.io.FileNotFoundException;
