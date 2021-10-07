@@ -20,8 +20,8 @@ import com.example.pictureshare.txMysql;
 import java.sql.SQLException;
 import java.util.List;
 
-public class PAdapter extends ArrayAdapter<com.example.pictureshare.Ph> {
-    private List<com.example.pictureshare.Ph> mPdata;
+public class PAdapter extends ArrayAdapter<com.example.pictureshare.show.Ph> {
+    private List<com.example.pictureshare.show.Ph> mPdata;
     private Context mContext;
     private int resourceId;
     private Boolean goodSwitch = false;
@@ -29,7 +29,7 @@ public class PAdapter extends ArrayAdapter<com.example.pictureshare.Ph> {
     private MySQLiteQpenHelper.MyDbOpenHelper mysqlhelp;
     static  final  String MESSAGE_STRING_title = "com.example.tset.MESSAGE_title";
     static  final  String MESSAGE_STRING_up = "com.example.tset.MESSAGE_up";
-    public PAdapter(Context context, int resourceId, List<com.example.tset.Ph> data) {
+    public PAdapter(Context context, int resourceId, List<com.example.pictureshare.show.Ph> data) {
         super(context, resourceId, data);
         this.mContext = context;
         this.mPdata = data;
@@ -37,7 +37,7 @@ public class PAdapter extends ArrayAdapter<com.example.pictureshare.Ph> {
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        com.example.tset.Ph p = getItem(position);
+        com.example.pictureshare.show.Ph p = getItem(position);
         View view ;
         view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
 
