@@ -1,4 +1,4 @@
-package com.example.tset.login;
+package com.example.pictureshare.login;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,15 +8,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.tset.R;
+import com.example.pictureshare.R;
+import com.example.pictureshare.mine;
 
 import java.util.List;
 
-public class mineAdapter  extends ArrayAdapter<mine> {
+public class mineAdapter extends ArrayAdapter<mine> {
     private List<mine> mineList;
     private Context mContext;
     private int resourceId;
-    public  mineAdapter(Context context, int resourceId,List<mine> data){
+    public mineAdapter(Context context, int resourceId, List<mine> data){
         super(context, resourceId, data);
         this.mContext = context;
         this.mineList = data;

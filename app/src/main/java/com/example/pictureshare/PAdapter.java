@@ -1,4 +1,4 @@
-package com.example.tset;
+package com.example.pictureshare;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.example.tset.login.LoginActivity;
-import com.example.tset.login.txMysql;
+import com.example.pictureshare.login.LoginActivity;
+import com.example.pictureshare.txMysql;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -250,7 +250,7 @@ public class PAdapter extends ArrayAdapter<com.example.tset.Ph> {
             public void onClick(View view) {
                 String text = tvTitle.getText().toString();
                 new AlertDialog.Builder(view.getContext()).setTitle("密码错误").setMessage(text).setPositiveButton("确定" , null).show();
-                Intent intent = new Intent(view.getContext(), ShowActivity.class);
+                Intent intent = new Intent(view.getContext(), com.example.pictureshare.show.ShowActivity.class);
                 intent.putExtra(MESSAGE_STRING_title,p.getmTitle());//发送查询图片标题
                 intent.putExtra(MESSAGE_STRING_up,p.getmAuthor());
                 mContext.startActivity(intent);
@@ -262,7 +262,7 @@ public class PAdapter extends ArrayAdapter<com.example.tset.Ph> {
             public void onClick(View view) {
                 String text = tvTitle2.getText().toString();
                 new AlertDialog.Builder(view.getContext()).setTitle("密码错误").setMessage(text).setPositiveButton("确定" , null).show();
-                Intent intent = new Intent(view.getContext(), ShowActivity.class);
+                Intent intent = new Intent(view.getContext(), com.example.pictureshare.show.ShowActivity.class);
                 intent.putExtra(MESSAGE_STRING_title,p.getmTitle2());//发送查询图片标题
                 intent.putExtra(MESSAGE_STRING_up,p.getmAuthor2());
                 mContext.startActivity(intent);
